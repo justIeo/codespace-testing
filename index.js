@@ -4,7 +4,7 @@ require('dotenv').config()
 const discord = require('discord.js')
 const client = new discord.Client({intents: [discord.Intents.FLAGS.GUILDS]})
 
-client.commands = new Collection();
+client.commands = new discord.Collection();
 const commandsPath = path.join(__dirname, 'cmds');
 const commandFiles = fs.readdirSync(commandsPath).filter(file => file.endsWith('.js'));
 
