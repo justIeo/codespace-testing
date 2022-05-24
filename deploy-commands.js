@@ -15,6 +15,6 @@ for (const file of commandFiles) {
 
 const rest = new REST({ version: '9' }).setToken(process.env.TOKEN);
 
-rest.put(Routes.applicationGuildCommands('clientId', 'guildId'), { body: commands })
+rest.put(Routes.applicationGuildCommands('978785045252829194', '804877486521319455'), { body: commands })
 	.then(() => console.log('Successfully registered application commands.'))
 	.catch(console.error);
